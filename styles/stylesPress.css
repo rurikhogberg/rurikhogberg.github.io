@@ -277,6 +277,11 @@ div.stickybackbtn {
   grid-template-columns: 1fr;
 }
 
+main{
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
 }
 
 
@@ -308,8 +313,8 @@ div.stickybackbtn {
 
 
     main{
-        margin-left: 2vw;
-        margin-right: 2vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
     }
 
 }

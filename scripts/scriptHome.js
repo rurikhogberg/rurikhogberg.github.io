@@ -1,9 +1,3 @@
-// Toggle navigation menu visibility on small screens
-document.querySelector(".menu-toggle").addEventListener("click", () => {
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("open");
-});
-
 let slideIndex = 1;
 let autoSlideTimeout;
 
@@ -100,4 +94,11 @@ window.addEventListener('load', function () {
 
   window.requestAnimationFrame(step);
 });
+
+// Toggle navigation menu visibility on small screens
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle("open");
+});
+
 

@@ -344,7 +344,7 @@ a:hover{
         background: rgba(255, 255, 255, .85);
         border: 1px solid #6e0c0c;
         padding: 1rem;
-        z-index: 5;
+        z-index: 3;
     }
 
     /* Display the hamburger icon */

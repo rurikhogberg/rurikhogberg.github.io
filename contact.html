@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%20Tight%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap">
+--> <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="media/ME/Rurik_hogberg-modified (1).png">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="home-link">RURIK</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <div class="nav-links">
+                <a href="projects.html">SELECTED WORK</a>
+                <a href="cv.html">CV</a>
+                <a href="press.html">PRESS</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="is-transitioned">
+        <section class="contact-form">
+            <h1>CONTACT</h1>
+            <div class="container">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="4f9d7220-4e0c-45fc-80ac-a1ede22d0301">
+
+                    <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="NAME" required>
+                    
+                    <label for="EMAIL"></label>
+                        <input type="text" id="EMAIL" name="email" placeholder="EMAIL" required>
+              
+                    <label for="subject"></label>
+                        <input type="text" id="subject" name="subject" placeholder="SUBJECT" required>
+
+                    <label for="message"></label>
+                        <textarea id="message" name="message" placeholder="Your message" style="height:200px" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page (change this to the URL including https etc. for it to work) -->
+                    <input type="hidden" name="redirect" value="contactSubmit.html"> 
+            
+                    <input type="submit" value="SUBMIT">
+                </form>
+                
+                <!-- <form action="/action_page.php">
+                  <label for="name"></label>
+                  <input type="text" id="name" name="name" placeholder="NAME" required>
+              
+                  <label for="EMAIL"></label>
+                  <input type="text" id="EMAIL" name="email" placeholder="EMAIL" required>
+              
+                  <label for="subject"></label>
+                  <input type="text" id="subject" name="subject" placeholder="SUBJECT" required>
+
+                  <label for="subject"></label>
+                  <textarea id="subject" name="subject" placeholder="Your message" style="height:200px" ></textarea>
+              
+                  <input type="submit" value="SUBMIT">
+                </form> -->
+              </div>
+        </section>
+        <section class="socials">
+            <h1>OTHER CHANNELS</h1>
+            <h3><a href="mailto:rurik.hogberg@outlook.com">EMAIL</a></h3>
+            <h3><a href="https://www.linkedin.com/in/rurikhogberg">LINKEDIN</a></h3>
+            <h3>WECHAT</h3>
+            <h3><img src="media/Press/wechat.jpg" style="width:6vw;"></h3>
+            </section>
+    </main>
+
+    <footer>
+       <!-- <div class="foot-links">
+            <table class="foot-menu">
+                <tr class="foot-menu-headings">
+                    <td>
+                    <a href="selected-projects.html">PROJECTS</a>
+                    <a href="cv.html">CV</a>
+                    <a href="press.html">PRESS</a>
+                    <a href="about.html">CONTACT</a>
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+        <p style="font-size: xx-small; text-align: center;">© 2025 RURIK. All rights reserved.</p>
+    </footer>
+
+    <!--<script src="script.js"></script>-->
+</body>
+</html>

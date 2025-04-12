@@ -1,0 +1,718 @@
+/* Base Styles */
+@font-face {
+    font-family: 'InterTight';
+    src:    url(Inter_Tight/InterTight-VariableFont_wght.ttf),
+            url(Inter_Tight/InterTight-Italic-VariableFont_wght.ttf);
+}
+
+* , *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "InterTight";
+}
+
+body {
+    font-weight: 300;
+    margin: 0;
+    color: #000000;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        font-size: larger;
+        font-weight: 200;
+    }
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+main {
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+.is-transitioned {
+    animation: fade-in 1s forwards;
+    background-color: #6e0c0c, 0.25;
+    opacity: 0;
+    transform: translateY(30vh);
+}
+
+.smooth-transition {
+    transition: 1s;
+}
+
+@keyframes fade-in {
+    from {
+        background-color:  #6e0c0c, 0.25;
+        opacity: 0;
+        transform: translateY(30vh);
+    }
+    to {
+        background-color:#6e0c0c 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+/* Home link aligned to the left */
+.home-link {
+    font-weight: 100;
+    font-stretch: condensed;
+    font-size: 2.2rem;
+    color: #000000;
+    text-decoration: none;
+    align-items: left;
+} 
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* no underline */
+}
+
+a:hover{
+    color:#6e0c0c;
+    text-decoration:underline;
+}
+.home-link:hover{
+    color:#6e0c0c;
+    text-decoration: none; /* no underline */
+}
+
+/* Navigation links */
+.nav-links {
+    color: #000000;
+    font-weight: 200;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Index Page */
+.welcome-title {
+    h1 {
+        text-align: center;
+        font-size: 1000%;
+        color:#ebe8e8
+    }
+}
+
+/* CV Page */
+.resume {
+    margin-left: 6rem;
+    align-items: left;
+    width: 45vw;
+    max-width: 90ch;
+    /*padding: 1rem 2rem;*/
+    font-size: x-small;
+    line-height: 2;
+
+    h1{
+        font-weight: 200;
+    }
+
+    h3 {
+        font-size: larger;
+        margin-top: 30px;
+        margin-bottom: 2px;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: x-small;
+        font-weight: 300;
+    }
+
+    .education-table {
+        font-size: x-small;
+    }
+
+    .edu-dates {
+        width: 8ch;
+        vertical-align: text-top;
+        padding-right: 4ch;
+    }
+
+    .experience-table {
+        font-size: x-small;
+    }
+
+    .cv-dates {
+        width: 14ch;
+        vertical-align: text-top;
+        padding-right: 4ch;
+    }
+
+    .cv-titles {
+        font-style: italic;
+        width: 25ch;
+    }
+}
+
+/* Contact Page */
+
+.contact-form{
+    margin-left: 6rem;
+    align-items: left;
+   /* width: 45vw; */
+    max-width: 90ch;
+    /*padding: 1rem 2rem;*/
+    font-size: x-small;
+    line-height: 2;
+
+    h1{
+        font-weight: 200;
+    }
+
+    box-sizing: border-box;
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        color: #000000;
+        font-weight: 200;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        color: #6e0c0c;
+        text-decoration: underline;
+      }
+      
+      .container {
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 20px;
+      }
+}
+
+.socials{
+    margin-left: 6rem;
+    align-items: left;
+    width: 45vw;
+    max-width: 90ch;
+    /*padding: 1rem 2rem;*/
+    font-size: x-small;
+    line-height: 2;
+
+    h1{
+        font-weight: 200;
+    }
+}
+
+/*PROJECTS PAGE*/
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, fit-content(500px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    padding-left: 0px;
+    margin-left: 6rem;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.005);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Keep text color clear white */
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 200;
+    padding: 10px;
+    visibility: hidden; /* Initially hidden */
+    /*transform: translateY(10px); /* Start slightly out of place */
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+    visibility: visible; /* Make it visible on hover */
+    /*transform: translateY(0); /* Move to its normal position */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.sticky {
+    position: fixed; /* Ensures it stays fixed to the viewport */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+#scrollToTop {
+    
+    padding: 10px 17.5px;
+    background: #ffffff;
+    color:rgba(0, 0, 0, 0.2);
+    font-weight: 200;
+    font-size: larger;
+    border:1px, solid, rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hamburger icon hidden on larger screens */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/*Project-Layout*/
+.featured-media {
+    position: relative;
+    grid-column: 1 / -1;
+    overflow: hidden;
+    height: 100vh; /* Ensures it takes the full viewport height */
+    width: 100vw;
+    margin-top: 0rem;
+    margin-left: -13vw;
+    margin-right: -12vw;
+}
+
+.project-title {
+    position: absolute;
+    top: 40%;
+    left: 42%; 
+    text-align: justify;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    font-weight: 100;
+    color: #ffffff;
+    width: 70%;
+}
+
+.project-subtitle {
+    font-size: 2.5vw;
+}
+
+/* embedded background
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+/* Text Overlay*/
+/* .text-overlay {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    top:10%;
+    left: 50%;
+    font-size: 4em;
+}
+/*Animation when moving under the embed */
+/* .text-overlay.move-under {
+    transform: translate(-50%, 150%);
+    opacity: 0;
+}  */
+
+/* .test {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+.project-title2 h1 {
+    margin-left: -9vw;
+    margin-right: -9vw; 
+    font-size: 9vw;
+    font-weight: 700;
+    /* margin-bottom: 1rem; */
+    margin-top: -5.5vw;
+    position: relative;
+    color:darkcyan;
+    box-shadow:    45px 0 0 #f00,-45px 0 0 #f00;
+  }
+  
+.featured-media iframe,
+.featured-media embed,
+.featured-media video,
+.featured-media img {
+    align-items: left;
+    width: 100vw;
+    height: 100%;
+    display: block;
+    border: none; /* Removes any default iframe border */
+    object-fit: cover; /* Ensures proper scaling */
+}
+
+  .text-block {
+    margin-top: 3rem;
+    grid-column: 1 / -1;
+  }
+
+  .text-block h2{
+    font-weight:100;
+    margin-top: 3rem;
+  }
+  .text-block p {
+    font-size: 1em;
+    margin-bottom: 1rem;
+    font-weight: 200;
+    /* text-align: justify; */
+  }
+
+  .chessboard {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .chessboard img {
+    max-width: 100%;
+    clip-path: inset(0 0 0 0 round 2px);
+  }
+
+  .chessboard video{
+    width: 100%;
+    clip-path: inset(0 0 0 0 round 2px);
+  }
+
+  .WB-design-container{
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    height: 80vh;
+  }
+
+  .design-process-pictures img{
+    height:60vh;
+  }
+
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .supporting-media {
+    margin: auto;
+    width: 80%;
+  }
+
+  /* .supporting-media img {
+    width: 50vw;
+    display: block;
+    border: 1px solid #ddd;
+  }
+
+  .supporting-media video {
+    height: 100vh;
+  } */
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+
+  /* Chessboard Styles */
+.chessboard .row {
+display: grid;
+gap: 1rem;
+grid-template-columns: 1fr;
+}
+
+/* Default Desktop Layout */
+@media (min-width: 1268px) {
+.chessboard .row {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.row.text-first {
+  grid-template-areas: "text image";
+}
+.row.text-first .text { order: 1; }
+.row.text-first img { order: 2; }
+.row.text-first video {order: 2; }
+.row.image-first {
+  grid-template-areas: "image text";
+}
+.row.image-first .text { order: 2; }
+.row.image-first img { order: 1; }
+
+}
+
+/* Mobile-Friendly Stacked Layout */
+@media (max-width: 1267px) {
+.chessboard .row img {
+  margin-bottom: 1rem;
+}
+.chessboard .row {
+  grid-template-columns: 1fr;
+}
+
+}
+
+
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    /* Hide the navigation links by default and show the hamburger icon */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        right: 20px;
+        background: rgba(255, 255, 255, .85);
+        border: 1px solid #6e0c0c;
+        padding: 1rem;
+        z-index: 3;
+    }
+
+    /* Display the hamburger icon */
+    .menu-toggle {
+        display: inline;
+    }
+
+    /* Show navigation links when active */
+    .nav-links.open {
+        display: flex;
+    } 
+
+    .resume {
+        width: 75vw;
+    }
+
+    /* main {
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+        align-items: center;
+    } */
+    .portfolio {
+        margin-left: 2rem;
+        margin-right: 0rem;
+    }
+    /* .Project-container {
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+    } */
+
+    .featured-media {
+        grid-column: 1 / -1;
+        overflow: hidden;
+        height: 100vh; /* Ensures it takes the full viewport height */
+        width: 110vw;
+        margin-top: 1.5rem;
+        /* margin-left: 0vw;
+        margin-right: 0vw; */
+    }
+
+     /* .text-block h1 {
+    margin-left: -9vw;
+    margin-right: -9vw;
+    /* font-size: 9em;
+    font-weight: 100; 
+    margin-bottom: 1rem;
+  } */
+
+}
+
+
+
+/* Floating button styles */
+.music-control {
+    position: fixed; /* Ensures it stays in the same place when scrolling */
+    top: 7.5rem;
+    right: 20px;
+    align-content: center;
+    .music-control-bttn{
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);;
+    font-size: xx-large;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 24px; */
+    }
+    z-index: 5; /* Ensures it stays above other elements */
+
+    .m-button-txt{
+        font-size: x-small;
+        position: relative;
+        color: rgba(0, 0, 0, 0.5);
+        top:-0.3rem;
+        left:-0.275rem;
+    }
+}
+
+
+/* padding: 10px 17.5px;
+    background: #ffffff;
+    color:;
+    font-weight: 200;
+    font-size: larger;
+    border:1px, solid, rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden; */
+
+.music-control-bttn:hover {
+    background: rgba(220, 220, 220, 0.5);
+}
+
+
+/*QMSHT*/
+/* .scroll-container { */
+    /* position: fixed; */
+    /*top: 0;
+    left: 0;*/
+    /* width: 100%; */
+    /* min-height: 80vh; */
+    /* background: url('Along_the_River_During_the_Qingming_Festival_\(Qing_Court_Version\).jpg') repeat-x; Use your scroll painting image */
+    /* background-size: auto 100%; Adjust height and let width adjust automatically */
+    /* background-position: right 0; */
+    /*animation: move-background 600s linear infinite; /* Infinite loop for background movement */
+    /* overflow:hidden */
+/* } */
+
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Keep text above the background */
+    /*max-width: 800px;*/
+    font-size: x-large;
+    color:#ffffff;
+    font-weight: 300;
+    margin: 0 auto;
+    align-items: center;
+    padding: 50px 20px;
+    /*background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+    /*border-radius: 10px;*/
+}
+
+/* @keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+} */
+
+/* .ProjectDescription {
+    margin-left: 10rem;
+    margin-right: 10rem;
+} */
+
+
+/* Footer */
+footer {
+    font-weight: 200;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-top: 1px solid #ffffff;
+    text-align: center;
+    .foot-menu{
+        position: absolute;
+        align-items: center;
+    }
+    .foot-menu-headings {
+        width:25vw;
+    }
+}

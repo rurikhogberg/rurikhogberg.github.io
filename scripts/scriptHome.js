@@ -1,3 +1,9 @@
+// Toggle navigation menu visibility on small screens
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle("open");
+});
+
 let slideIndex = 1;
 let autoSlideTimeout;
 
@@ -31,79 +37,7 @@ function showSlides(n) {
     // Restart auto-slideshow
     clearTimeout(autoSlideTimeout);
     autoSlideTimeout = setTimeout(() => showSlides(), 6000);
-}
-  
-// function showSlides(n) {
-//     const slides = document.getElementsByClassName("mySlides");
-//     const dots = document.getElementsByClassName("dot");
-  
-//     if (n !== undefined) {
-//       slideIndex = n;
-//     } else {
-//       slideIndex++;
-//     }
-  
-//     if (slideIndex > slides.length) { slideIndex = 1; }
-//     if (slideIndex < 1) { slideIndex = slides.length; }
-  
-//     // Hide all slides and remove active class
-//     for (let i = 0; i < slides.length; i++) {
-//       slides[i].classList.remove("active");
-//       slides[i].style.display = "none";
-//     }
-  
-//     // Deactivate all dots
-//     for (let i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//     }
-  
-//     // Show current slide
-//     const current = slides[slideIndex - 1];
-//     current.style.display = "block";
-  
-//     // Force reflow to allow transition to trigger
-//     void current.offsetWidth;
-  
-//     current.classList.add("active");
-//     dots[slideIndex - 1].className += " active";
-  
-//     // Optional: Restart auto-slideshow
-//     clearTimeout(autoSlideTimeout);
-//     autoSlideTimeout = setTimeout(() => showSlides(), 5000);
-// }
-  
-// function showSlides(n) {
-//   const slides = document.getElementsByClassName("mySlides");
-//   const dots = document.getElementsByClassName("dot");
-
-//   // Manual control
-//   if (n !== undefined) {
-//     slideIndex = n;
-//   } else {
-//     slideIndex++;
-//   }
-
-//   if (slideIndex > slides.length) { slideIndex = 1; }
-//   if (slideIndex < 1) { slideIndex = slides.length; }
-
-//   // Hide all slides
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-
-//   // Deactivate all dots
-//   for (let i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-
-//   // Show current slide
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-
-//   // Reset auto-slideshow
-//  // clearTimeout(autoSlideTimeout);
-//   //autoSlideTimeout = setTimeout(() => showSlides(), 5000); // change image every 3 sec
-// }
+} 
 
 // Manual controls
 function plusSlides(n) {

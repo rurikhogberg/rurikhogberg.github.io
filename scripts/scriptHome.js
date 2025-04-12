@@ -49,51 +49,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-window.addEventListener('load', function () {
-  const target = document.getElementById('target-section');
-  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 2000; // milliseconds
-  let start = null;
-  let userInterrupted = false;
+// window.addEventListener('load', function () {
+//   const target = document.getElementById('target-section');
+//   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+//   const startPosition = window.pageYOffset;
+//   const distance = targetPosition - startPosition;
+//   const duration = 2000; // milliseconds
+//   let start = null;
+//   let userInterrupted = false;
 
-  // Detect user interaction
-  const interruptEvents = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+//   // Detect user interaction
+//   const interruptEvents = ['wheel', 'touchstart', 'keydown', 'mousedown'];
 
-  function onUserInterrupt() {
-    userInterrupted = true;
-    // Optionally, remove listeners after first interaction
-    interruptEvents.forEach(event =>
-      window.removeEventListener(event, onUserInterrupt)
-    );
-  }
+//   function onUserInterrupt() {
+//     userInterrupted = true;
+//     // Optionally, remove listeners after first interaction
+//     interruptEvents.forEach(event =>
+//       window.removeEventListener(event, onUserInterrupt)
+//     );
+//   }
 
-  // Attach listeners
-  interruptEvents.forEach(event =>
-    window.addEventListener(event, onUserInterrupt, { passive: true })
-  );
+//   // Attach listeners
+//   interruptEvents.forEach(event =>
+//     window.addEventListener(event, onUserInterrupt, { passive: true })
+//   );
 
-  function step(timestamp) {
-    if (userInterrupted) return;
+//   function step(timestamp) {
+//     if (userInterrupted) return;
 
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    const percent = Math.min(progress / duration, 1); // from 0 to 1
+//     if (!start) start = timestamp;
+//     const progress = timestamp - start;
+//     const percent = Math.min(progress / duration, 1); // from 0 to 1
 
-    window.scrollTo(0, startPosition + distance * easeInOutQuad(percent));
+//     window.scrollTo(0, startPosition + distance * easeInOutQuad(percent));
 
-    if (progress < duration) {
-      window.requestAnimationFrame(step);
-    }
-  }
+//     if (progress < duration) {
+//       window.requestAnimationFrame(step);
+//     }
+//   }
 
-  function easeInOutQuad(t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  }
+//   function easeInOutQuad(t) {
+//     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+//   }
 
-  window.requestAnimationFrame(step);
-});
+//   window.requestAnimationFrame(step);
+// });
 
 // Toggle navigation menu visibility on small screens
 document.querySelector(".menu-toggle").addEventListener("click", () => {

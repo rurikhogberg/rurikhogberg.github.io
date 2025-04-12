@@ -272,6 +272,7 @@ a:hover{
 
 }
 
+
 /* Mobile-Friendly Stacked Layout */
 @media (max-width: 1267px) {
 .chessboard .row img {
@@ -279,6 +280,24 @@ a:hover{
 }
 .chessboard .row {
   grid-template-columns: 1fr;
+}
+
+main {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.slideshow-container{
+    width:100vw;
+    height:60vh;
+}
+
+.footer {
+    width:90vw;
+}
+
+.footer table {
+    width:90vw;
 }
 
 }
@@ -323,6 +342,10 @@ a:hover{
     }
 
     .footer {
+        width:90vw;
+    }
+
+    .footer table {
         width:90vw;
     }
 

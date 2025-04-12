@@ -282,6 +282,11 @@ main{
     margin-right: 0vw;
 }
 
+.portfolio {
+    width:75vw;
+}
+
+
 }
 
 
@@ -311,10 +316,13 @@ main{
         display: flex;
     } 
 
-
     main{
         margin-left: 0vw;
         margin-right: 0vw;
+    }
+
+    .portfolio {
+        width:90vw;
     }
 
 }

@@ -562,6 +562,11 @@ grid-template-columns: 1fr;
 
     .resume {
         width: 75vw;
+        margin-left: 0rem;
+    }
+    
+    .contact-form {
+        margin-left: 0rem;
     }
 
     /* main {

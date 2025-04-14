@@ -134,6 +134,10 @@ a:hover{
         font-weight: 300;
     }
 
+    .about-section{
+        width:85%;
+    }
+
     .education-table {
         font-size: x-small;
     }
@@ -561,8 +565,13 @@ grid-template-columns: 1fr;
     } 
 
     .resume {
-        width: 75vw;
+        width: 85vw;
         margin-left: 0rem;
+        
+        .about-section{
+            width:100%;
+        }
+    
     }
     
     .contact-form {
